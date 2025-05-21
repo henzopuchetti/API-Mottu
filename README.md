@@ -1,6 +1,10 @@
 
 # 🏍️ Mottu Pátio - API de Controle Automatizado de Motos
 
+## 🙍‍♂️🙍‍♂️ Integrantes
+Henzo Boschiero Puchetti - Rm555179
+Luann Domingos Mariano - Rm558548
+
 ## 📘 Descrição do Projeto
 
 Este projeto é uma API REST desenvolvida em Java com Spring Boot para automatizar o controle de entrada, saída e posicionamento de motocicletas nos pátios da Mottu. A solução tem como objetivo eliminar processos manuais e tornar a gestão dos pátios mais eficiente, segura e escalável.
