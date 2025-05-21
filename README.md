@@ -206,4 +206,4 @@ A API estará disponível em:
 - ✅ **Implementar autenticação e autorização** para controle de acesso à API;
 - ✅ **Criar dashboard visual** com Spring + React para supervisão dos pátios em tempo real;
 - ✅ **Integrar com API externa de leitura de motos** (fornecida pela Mottu ou terceiros) para automatizar o processo de entrada e saída, substituindo o envio manual da placa via request.
-
+- ✅ **Deixar todos os campos em ingles**
