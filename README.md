@@ -59,36 +59,26 @@ com.fiap.mottu_patio
 ## 🔌 Endpoints Principais
 ---
 
-🔄 Fluxo Esperado da API
-Cadastro de Pátio
+## 🔄 Fluxo Esperado da API
 
-Ao cadastrar um novo pátio com as informações corretas (nome, endereço, capacidade), o sistema gera automaticamente as vagas com base na capacidade informada.
+1. **Cadastro de Pátio**  
+   - Ao cadastrar um novo pátio com as informações corretas (nome, endereço, capacidade), o sistema **gera automaticamente as vagas** com base na capacidade informada.
 
-Cadastro de Moto
+2. **Cadastro de Moto**  
+   - Uma moto deve ser cadastrada com os dados corretos (placa, modelo, cor, ano) e o **ID do pátio** onde ela ficará estacionada.
 
-Uma moto deve ser cadastrada com os dados corretos (placa, modelo, cor, ano) e o ID do pátio onde ela ficará estacionada.
+3. **Evento LPR - Entrada**  
+   - Ao registrar um evento do tipo `ENTRADA`, passando a **placa da moto** e a **vaga que ela ocupou**, o sistema:
+     - Busca pela moto com base na placa informada;
+     - Associa a vaga à moto encontrada;
+     - Altera o status da vaga para **ocupada**;
+     - Reduz o número de **vagas disponíveis** no pátio correspondente.
 
-Evento LPR - Entrada
-
-Ao registrar um evento do tipo ENTRADA, passando a placa da moto e a vaga que ela ocupou, o sistema:
-
-Busca pela moto com base na placa informada;
-
-Associa a vaga à moto encontrada;
-
-Altera o status da vaga para ocupada;
-
-Reduz o número de vagas disponíveis no pátio correspondente.
-
-Evento LPR - Saída
-
-Ao registrar um evento do tipo SAIDA com a placa da moto:
-
-O sistema desassocia a vaga da moto;
-
-Altera o status da vaga para livre;
-
-Aumenta o número de vagas disponíveis no pátio.
+4. **Evento LPR - Saída**  
+   - Ao registrar um evento do tipo `SAIDA` com a placa da moto:
+     - O sistema desassocia a vaga da moto;
+     - Altera o status da vaga para **livre**;
+     - Aumenta o número de **vagas disponíveis** no pátio.
 
 ## 🧪 Exemplos de Requisições (via Postman)
 
@@ -158,6 +148,7 @@ http://localhost:8080/api/motos
 }
 ```
 
+### ✨ Endpoints
 
 ### 📦 Motos (`/api/motos`)
 - `POST` - Criar moto
